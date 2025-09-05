@@ -11,32 +11,49 @@ Without ARP configuration and verification, devices cannot establish correct end
 
 🔹 Scope of the Solution
 
-Demonstrates ARP working in a simulated IIoT environment.
-Helps understand how devices maintain ARP tables to resolve IP-to-MAC mappings.
-Provides the foundation for secure and reliable communication in industrial automation systems.
-Can be extended to study ARP spoofing attacks and mitigation in IIoT.
+- Understand LAN construction using Cisco Packet Tracer.
+- Study ARP operation and ARP table updates when PCs communicate.
+- Learn how to clear ARP cache and verify re-learning.
+- Foundation for understanding advanced networking in IIoT and cybersecurity (e.g., ARP spoofing).
 
 🔹 Required Components
-Hardware (Simulated)
-PCs (representing IIoT devices)
-Switch
-Router (optional, for inter-network ARP testing)
-Industrial Controllers / IoT nodes (represented via PCs in Packet Tracer)
-Software & Tools
-Cisco Packet Tracer (preferred for ARP simulation)
-Alternative Tools: GNS3 / TinkerCad (basic network simulation) / Fritzing (circuit-level visualization)
-IDE/Editor: VS Code (for documentation and GitHub management)
-GitHub (for project upload and version control)
 
-🔹 Simulated Circuit / Network Topology
+Hardware (Simulated in Cisco Packet Tracer)
+2 PCs (PC0 and PC1)
+1 Switch (8-port)
+2 Straight-Through LAN cables
 
-Setup in Cisco Packet Tracer:
-Two PCs connected to a switch.
-Assign IP addresses to both PCs (e.g., PC1 → 192.168.1.2, PC2 → 192.168.1.3).
-Ping PC2 from PC1.
-Observe ARP table on PC1 using command:
-arp -a
-Verify that the MAC address of PC2 is resolved.
+Software
+Cisco Packet Tracer (for simulation)
+GitHub (for project upload and documentation)
 
+🔹 Network Topology
+
+PC0  ────────┐
+              │
+         8-Port Switch
+              │
+PC1  ────────┘
+
+
+🔹 Configuration Steps
+
+Step 1: Setup Topology
+- Drag and drop 2 PCs and 1 Switch (2960-8TT) into the workspace.
+- Connect PC0 and PC1 to the switch using Copper Straight-Through cables.
+
+Step 2: Assign IP Addresses
+- PC0 → IP: 192.168.1.2, Subnet Mask: 255.255.255.0
+- PC1 → IP: 192.168.1.3, Subnet Mask: 255.255.255.0
+
+Step 3: Verify Connectivity
+- On PC0, open Command Prompt → type: ping 192.168.1.3
+- Successful ping indicates connectivity.
+
+Step 4: Observe ARP Operation
+- On PC0, type: arp -a
+- This shows the MAC address of PC1.
+- clear ARP cache with: arp -d
+- Then ping again and check ARP table → it re-learns the MAC address.
 
 
