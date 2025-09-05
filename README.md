@@ -34,7 +34,7 @@ Devices in a LAN communicate using IP addresses, but actual communication happen
 5. Use `arp -d` to clear cache, then re-ping.
 
 ## Demo
-🎥 [Watch Demo Video](Demo.mp4)
+🎥 [Watch Demo Video](demo.mp4)
 
 ## Files in Repository
 - `README.md` → Documentation  
