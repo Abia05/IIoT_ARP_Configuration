@@ -22,7 +22,7 @@ Devices in a LAN communicate using IP addresses, but actual communication happen
   - GitHub (for documentation)
 
 ## Topology
-![LAN Topology](LAN_Topology.png)
+![LAN Topology](LAN_topology.png)
 
 ## Configuration Steps
 1. Connect PCs to the switch using LAN cables.
